@@ -1,5 +1,10 @@
 p#notice = notice
 
+h4 Original
+= image_tag @image.file.url(:original)
+
+h4 Small
+= image_tag @image.file.url(:small)
 
 = link_to 'Edit', edit_image_path(@image)
 '|

@@ -1,4 +1,4 @@
-= form_for @image do |f|
+= form_for @image do |form|
   - if @image.errors.any?
     #error_explanation
       h2 = "#{pluralize(@image.errors.count, "error")} prohibited this image from being saved:"
@@ -6,4 +6,19 @@
         - @image.errors.full_messages.each do |message|
           li = message
 
-  .actions = f.submit 'Save'
+  label Image
+  = form.file_field :file
+  br
+  label Crop Width
+  = form.text_field :width
+  br
+  label Crop Height
+  = form.text_field :height
+  br
+  label Ratio Crop
+  input type="radio" name="cropOption" value="Ratio Crop"
+  br
+  label No Scale
+  input type="radio" name="cropOption" value="No scale"
+  br
+  = form.submit 'Submit'
