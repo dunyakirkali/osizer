@@ -5,10 +5,10 @@ h1 Image Resızer
   = form.file_field :file
   br
   label Crop Width
-  input type="text" name="cropWidth"
+  = form.text_field :width
   br
   label Crop Height
-  input type="text" name="cropHeight"
+  = form.text_field :height
   br
   label Ratio Crop
   input type="radio" name="cropOption" value="Ratio Crop"
