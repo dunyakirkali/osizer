@@ -46,3 +46,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'slim-rails'
+
+gem "paperclip", "~> 3.0"
