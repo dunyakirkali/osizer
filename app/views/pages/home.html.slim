@@ -1,8 +1,8 @@
 h1 Image Resızer
 
-#uploaderForm
+= form_for @image, :url => images_path, :html => { :multipart => true } do |form|
   label Image
-  input type="file" name="imageFile" 
+  = form.file_field :file
   br
   label Crop Width
   input type="text" name="cropWidth"
